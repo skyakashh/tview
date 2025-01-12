@@ -1,9 +1,11 @@
 package main
 
-import (
-	"fmt"
-)
+import "github.com/rivo/tview"
+import Welcome
 
 func main() {
-	fmt.Println("akash")
+
+	if err := tview.NewApplication().SetRoot(Welcome(), true).Run(); err != nil {
+		panic(err)
+	}
 }
